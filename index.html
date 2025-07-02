@@ -1,221 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aprende Trading - Plataforma de Estudio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aprende Trading</title>
   <style>
-    /* Reset básico */
-    * {
-      box-sizing: border-box;
-      margin: 0; padding: 0;
-    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f7fa;
-      color: #222; /* texto más oscuro */
-      line-height: 1.7;<section id="portada" style="text-align: center; padding: 40px; background-color: #f4f4f4;">
-  <h1 style="font-size: 2.5em; margin-bottom: 20px;">Bienvenido a Aprende Trading</h1>
-  <p style="font-size: 1.2em; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
-    Explora recursos educativos, gráficos, análisis y herramientas para convertirte en un trader más preparado e informado.
-  </p>
-  <img src="img/pagina-web-trading.png" alt="Plataforma de trading" style="max-width: 90%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-</section>
-
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
     }
     header {
-      background: #2c3e50;
+      background-color: #0a0a23;
       color: white;
-      padding: 1rem 2rem;
       position: fixed;
-      width: 100%;
       top: 0;
-      left: 0;
+      width: 100%;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      font-weight: 700;
-      font-size: 1.8rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
     nav {
-      margin-top: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
     }
-    nav a {
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
       color: white;
       text-decoration: none;
-      margin-right: 1.5rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #1abc9c;
+    .spacer {
+      height: 80px;
     }
-    main {
-      max-width: 900px;
-      margin: 100px auto 40px;
-      background: white;
-      padding: 2.5rem 3rem; /* un poco más de padding */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #0a0a23;
+    }
+    .img-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .img-grid div {
+      max-width: 300px;
+      text-align: center;
+    }
+    .img-grid img {
+      width: 100%;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    section {
-      margin-bottom: 3rem;
-    }
-    section h2 {
-      margin-bottom: 1rem;
-      color: #2c3e50;
-      border-bottom: 3px solid #1abc9c;
-      padding-bottom: 0.3rem;
-    }
-    p, ul {
-      margin-bottom: 1.2rem;
-      font-size: 1.05rem; /* texto un poco más grande */
-      color: #222; /* texto más oscuro */
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-    iframe {
-      width: 100%;
-      height: 360px;
-      border-radius: 8px;
-      border: none;
-      margin-top: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    a.button-link {
-      display: inline-block;
-      background: #1abc9c;
-      color: white !important;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: 700;
-      text-decoration: none;
-      margin-top: 0.5rem;
-      transition: background 0.3s ease;
-    }
-    a.button-link:hover {
-      background: #16a085;
-    }
     footer {
+      background-color: #0a0a23;
+      color: white;
       text-align: center;
-      padding: 1rem;
-      color: #666;
-      border-top: 1px solid #ddd;
-      font-size: 0.9rem;
+      padding: 20px;
     }
-    /* Responsive */
-    @media (max-width: 600px) {
-      main {
-        margin: 90px 1rem 20px;
-        padding: 2rem 1.5rem;
-      }
-      header h1 {
-        font-size: 1.4rem;
-      }
-      nav a {
-        margin-right: 1rem;
-        font-size: 0.9rem;
-      }
-      p, ul {
-        font-size: 1rem;
-      }
-      iframe {
-        height: 240px;
+    @media screen and (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Aprende Trading</h1>
-    <nav>
-      <a href="#intro">Introducción</a>
-      <a href="#videos">Videos</a>
-      <a href="#lecturas">Lecturas</a>
-      <a href="#recursos">Recursos</a>
-      <a href="#guia">Guía rápida</a>
-    </nav>
-  </header>
-  <main>
-    <section id="intro">
-      <h2>Introducción</h2>
-      <p>Bienvenido a tu plataforma para aprender trading. Aquí encontrarás videos, lecturas y recursos seleccionados para ayudarte a dominar los conceptos básicos y avanzar en tu formación.</p>
-    </section>
-    <section id="videos">
-      <h2>Videos Recomendados</h2>
-      <iframe src="https://www.youtube.com/embed/3yNZIFteX2c" title="Introducción al Trading" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/mK4Lw04DXCQ" title="Errores comunes en trading" allowfullscreen style="margin-top:1rem;"></iframe>
-      <iframe src="https://www.youtube.com/embed/Okj_lIkf6KY" title="Análisis técnico básico" allowfullscreen style="margin-top:1rem;"></iframe><section id="velas"><section id="velas">
-  <h2>Gráficos de Velas Japonesas</h2>
-  <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-    <div style="flex:1 1 300px; text-align:center;">
-      <img src="img/velas-japonesas.png" alt="Velas Japonesas" style="width:100%;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);"/>
-      <p><strong>Velas básicas:</strong> Representan apertura, cierre, máximos y mínimos.</p>
+
+<header>
+  <nav>
+    <h1>📈 Aprende Trading</h1>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#tipos">Tipos</a></li>
+      <li><a href="#errores">Errores</a></li>
+      <li><a href="#graficos">Gráficos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="spacer"></div>
+
+<section id="inicio">
+  <h2>Bienvenido a tu plataforma de aprendizaje</h2>
+  <p style="text-align:center; max-width: 700px; margin: auto;">
+    Aquí encontrarás recursos educativos para comenzar en el mundo del trading: conceptos clave, tipos de análisis, plataformas populares, errores comunes y mucho más.
+  </p>
+  <img src="img/pagina-web-trading.png" alt="Presentación" style="display:block; margin:40px auto; max-width:90%; border-radius:10px;">
+</section>
+
+<section id="tipos">
+  <h2>Tipos de Trading</h2>
+  <ul>
+    <li><strong>Scalping:</strong> operaciones muy rápidas, de segundos a minutos.</li>
+    <li><strong>Day Trading:</strong> operaciones durante un mismo día.</li>
+    <li><strong>Swing Trading:</strong> operaciones de días o semanas.</li>
+    <li><strong>Position Trading:</strong> inversiones a largo plazo.</li>
+  </ul>
+</section>
+
+<section id="errores">
+  <h2>Errores Comunes de Principiantes</h2>
+  <ul>
+    <li>Entrar al mercado sin estrategia clara</li>
+    <li>No usar gestión de riesgo (stop loss)</li>
+    <li>Dejarse llevar por emociones</li>
+    <li>No llevar registro de operaciones</li>
+    <li>Sobreoperar sin análisis</li>
+  </ul>
+</section>
+
+<section id="graficos">
+  <h2>Gráficos y Plataformas</h2>
+  <div class="img-grid">
+    <div>
+      <img src="img/velas-japonesas.png" alt="Velas Japonesas">
+      <p><strong>Velas Japonesas:</strong> base del análisis técnico.</p>
     </div>
-    <div style="flex:1 1 300px; text-align:center;">
-      <img src="img/patrones-velas.png" alt="Patrones de Velas" style="width:100%;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);"/>
-      <p><strong>Patrones comunes:</strong> Doji, martillo, estrella fugaz y más.</p>
+    <div>
+      <img src="img/patrones-velas.png" alt="Patrones de Velas">
+      <p><strong>Patrones de velas:</strong> señales visuales de compra o venta.</p>
     </div>
-    <div style="flex:1 1 300px; text-align:center;">
-      <img src="img/ninjatrader.png" alt="NinjaTrader Plataforma" style="width:100%;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);"/>
-      <p><strong>NinjaTrader:</strong> Plataforma profesional para futuros y análisis técnico.</p>
+    <div>
+      <img src="img/ninjatrader.png" alt="NinjaTrader">
+      <p><strong>NinjaTrader:</strong> plataforma profesional para futuros y análisis.</p>
     </div>
   </div>
 </section>
 
-  <h2>Gráficos de Velas Japonesas</h2>
-  <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-    <div style="flex:1 1 300px; text-align:center;">
-      <img src="https://i.imgur.com/1Xj3g6Q.png" alt="Velas Japonesas ejemplo" loading="lazy" style="width:100%;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);"/>
-      <p><strong>Velas básicas:</strong> Cuerpo y mechas representando apertura, cierre, máximos y mínimos.</p>
-    </div>
-    <div style="flex:1 1 300px; text-align:center;">
-      <img src="https://i.imgur.com/WB4HxZJ.png" alt="Patrones De Velas" loading="lazy" style="width:100%;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);"/>
-      <p><strong>Patrones comunes:</strong> Doji, martillo, estrella fugaz, engulfings y más.</p>
-    </div>
-    <div style="flex:1 1 300px; text-align:center;">
-      <img src="https://i.imgur.com/Nd9QAzN.png" alt="Plataforma NinjaTrader" loading="lazy" style="width:100%;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);"/>
-      <p><strong>Plataforma NinjaTrader:</strong> Ideal para análisis avanzado y trading de futuros.</p>
-    </div>
-  </div>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p style="text-align:center;">¿Tienes preguntas? Escríbeme a <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
 </section>
 
-    </section>
-    <section id="lecturas">
-      <h2>Lecturas y Artículos</h2>
-      <ul>
-        <li><a href="https://www.investopedia.com/articles/trading/06/tradingbasics.asp" target="_blank" rel="noopener noreferrer">Conceptos básicos de trading - Investopedia</a></li>
-        <li><a href="https://www.babypips.com/learn/forex" target="_blank" rel="noopener noreferrer">Guía para principiantes en Forex - BabyPips</a></li>
-        <li><a href="https://www.tradingview.com/ideas/" target="_blank" rel="noopener noreferrer">Ideas de trading y análisis técnico - TradingView</a></li>
-      </ul>
-    </section>
-    <section id="recursos">
-      <h2>Otros Recursos</h2>
-      <ul>
-        <li><a href="https://www.tradingacademy.com/" target="_blank" rel="noopener noreferrer">Online Trading Academy</a></li>
-        <li><a href="https://www.investopedia.com/simulator/" target="_blank" rel="noopener noreferrer">Simulador de trading - Investopedia</a></li>
-        <li><a href="https://www.tradingview.com/chart/" target="_blank" rel="noopener noreferrer">Plataforma de gráficos - TradingView</a></li>
-      </ul>
-    </section>
-    <section id="guia">
-      <h2>Guía rápida para principiantes</h2>
-      <p>Estos son algunos consejos para empezar a operar con éxito:</p>
-      <ul>
-        <li>Define tu plan de trading y síguelo estrictamente.</li>
-        <li>Gestiona tu riesgo usando siempre stop loss.</li>
-        <li>Evita operar con emociones.</li>
-        <li>Empieza con cuentas demo antes de arriesgar dinero real.</li>
-        <li>Estudia constantemente y mantente actualizado.</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 Aprende Trading. Todos los derechos reservados.
-  </footer>
-</body>
-</html>
-
- 
+<footer>
+  © 2025 A
