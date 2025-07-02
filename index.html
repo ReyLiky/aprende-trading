@@ -3,6 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprende Trading - Plataforma de Estudio</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #1abc9c;
+    }
+    main {
+      max-width: 900px;
+      margin: 100px auto 40px; /* abajo algo de espacio */
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      border-bottom: 3px solid #1abc9c;
+      padding-bottom: 0.3rem;
+    }
+    p, ul {
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    iframe {
+      width: 100%;
+      height: 360px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    a.button-link {
+      display: inline-block;
+      background: #1abc9c;
+      color: white !important;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 0.5rem;
+      transition: background 0.3s ease;
+    }
+    a.button-link:hover {
+      background: #16a085;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      main {
+        margin: 90px 1rem 20px;
+        padding: 1.5rem;
+      }
+      header h1 {
+        font-size: 1.4rem;
+      }
+      nav a {
+        margin-right: 1rem;
+        font-size: 0.9rem;
+      }
+      iframe {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aprende Trading</h1>
+    <nav>
+      <a href="#intro">Introducción</a>
+      <a href="#videos">Videos</a>
+      <a href="#lecturas">Lecturas</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#guia">Guía rápida</a>
+    </nav>
+  </header>
+  <main>
+    <section id="intro">
+      <h2>Introducción</h2>
+      <p>Bienvenido a tu plataforma para aprender trading. Aquí encontrarás videos, lecturas y recursos seleccionados para ayudarte a dominar los conceptos básicos y avanzar en tu formación.</p>
+    </section>
+    <section id="videos">
+      <h2>Videos Recomendados</h2>
+      <iframe src="https://www.youtube.com/embed/3yNZIFteX2c" title="Introducción al Trading" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/mK4Lw04DXCQ" title="Errores comunes en trading" allowfullscreen style="margin-top:1rem;"></iframe>
+      <iframe src="https://www.youtube.com/embed/Okj_lIkf6KY" title="Análisis técnico básico" allowfullscreen style="margin-top:1rem;"></iframe>
+    </section>
+    <section id="lecturas">
+      <h2>Lecturas y Artículos</h2>
+      <ul>
+        <li><a href="https://www.investopedia.com/articles/trading/06/tradingbasics.asp" target="_blank" rel="noopener noreferrer">Conceptos básicos de trading - Investopedia</a></li>
+        <li><a href="https://www.babypips.com/learn/forex" target="_blank" rel="noopener noreferrer">Guía para principiantes en Forex - BabyPips</a></li>
+        <li><a href="https://www.tradingview.com/ideas/" target="_blank" rel="noopener noreferrer">Ideas de trading y análisis técnico - TradingView</a></li>
+      </ul>
+    </section
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aprende Trading - Videos y Lecturas</title>
   <style>
     body {
