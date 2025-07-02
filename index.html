@@ -3,72 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aprende Trading - Plataforma Educativa</title>
+  <title>Aprende Trading - Plataforma de Estudio</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: #f4f7fa; color: #222; line-height: 1.7; }
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      color: #222; /* texto más oscuro */
+      line-height: 1.7;
+    }
     header {
       background: #2c3e50;
       color: white;
+      padding: 1rem 2rem;
       position: fixed;
-      top: 0; width: 100%; height: 60px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2rem; z-index: 1000;
-    }
-    header h1 { font-size: 1.8rem; }
-    nav a {
-      color: white; margin-left: 1.5rem;
-      text-decoration: none; font-weight: 600; font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #1abc9c; }
-
-    .layout {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      margin-top: 140px;
-      padding: 0 1rem;
-    }
-    .sidebar {
-      width: 180px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .sidebar img {
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
-    .content {
-      flex: 1;
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #1abc9c;
+    }
+    main {
+      max-width: 900px;
+      margin: 100px auto 40px;
       background: white;
-      padding: 2.5rem 3rem;
+      padding: 2.5rem 3rem; /* un poco más de padding */
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     section {
       margin-bottom: 3rem;
-      scroll-margin-top: 80px;
     }
     section h2 {
+      margin-bottom: 1rem;
       color: #2c3e50;
       border-bottom: 3px solid #1abc9c;
       padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
     }
     p, ul {
       margin-bottom: 1.2rem;
-      font-size: 1.05rem;
+      font-size: 1.05rem; /* texto un poco más grande */
+      color: #222; /* texto más oscuro */
     }
-    ul { padding-left: 1.5rem; }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
     iframe {
-      width: 100%; height: 360px;
-      border: none; border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      height: 360px;
+      border-radius: 8px;
+      border: none;
       margin-top: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    a.button-link {
+      display: inline-block;
+      background: #1abc9c;
+      color: white !important;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 0.5rem;
+      transition: background 0.3s ease;
+    }
+    a.button-link:hover {
+      background: #16a085;
     }
     footer {
       text-align: center;
@@ -76,17 +98,26 @@
       color: #666;
       border-top: 1px solid #ddd;
       font-size: 0.9rem;
-      margin-top: 40px;
     }
-    @media (max-width: 1000px) {
-      .layout { flex-direction: column; margin-top: 100px; }
-      .sidebar {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
+    /* Responsive */
+    @media (max-width: 600px) {
+      main {
+        margin: 90px 1rem 20px;
+        padding: 2rem 1.5rem;
       }
-      iframe { height: 240px; }
+      header h1 {
+        font-size: 1.4rem;
+      }
+      nav a {
+        margin-right: 1rem;
+        font-size: 0.9rem;
+      }
+      p, ul {
+        font-size: 1rem;
+      }
+      iframe {
+        height: 240px;
+      }
     }
   </style>
 </head>
@@ -94,76 +125,56 @@
   <header>
     <h1>Aprende Trading</h1>
     <nav>
-      <a href="#intro">Inicio</a>
+      <a href="#intro">Introducción</a>
       <a href="#videos">Videos</a>
       <a href="#lecturas">Lecturas</a>
       <a href="#recursos">Recursos</a>
-      <a href="#guia">Guía</a>
+      <a href="#guia">Guía rápida</a>
     </nav>
   </header>
-
-  <main class="layout">
-    <!-- Lado izquierdo -->
-    <div class="sidebar">
-      <img src="https://i.imgur.com/1Xj3g6Q.png" alt="Tipos de Velas">
-      <img src="https://i.imgur.com/WB4HxZJ.png" alt="Gráfico Técnico">
-      <img src="https://i.imgur.com/Nd9QAzN.png" alt="Plataforma NinjaTrader">
-    </div>
-
-    <!-- Contenido principal -->
-    <div class="content">
-      <section id="intro">
-        <h2>Bienvenido</h2>
-        <p>Esta es tu plataforma para estudiar trading de forma práctica y profesional. Aquí encontrarás material para aprender análisis técnico, gestión de riesgo, estrategias de entrada y salida, y mucho más.</p>
-      </section>
-
-      <section id="videos">
-        <h2>Videos Recomendados</h2>
-        <iframe src="https://www.youtube.com/embed/3yNZIFteX2c" title="Introducción al Trading" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/mK4Lw04DXCQ" title="Errores comunes en trading" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/Okj_lIkf6KY" title="Análisis Técnico Básico" allowfullscreen></iframe>
-      </section>
-
-      <section id="lecturas">
-        <h2>Lecturas Recomendadas</h2>
-        <ul>
-          <li><a href="https://www.investopedia.com/articles/trading/06/tradingbasics.asp" target="_blank">Conceptos Básicos de Trading - Investopedia</a></li>
-          <li><a href="https://www.babypips.com/learn/forex" target="_blank">Curso Completo de Forex - BabyPips</a></li>
-          <li><a href="https://www.tradingview.com/ideas/" target="_blank">Ideas de Trading Diario - TradingView</a></li>
-        </ul>
-      </section>
-
-      <section id="recursos">
-        <h2>Recursos y Herramientas</h2>
-        <ul>
-          <li><a href="https://www.tradingview.com/chart/" target="_blank">Gráficos Interactivos - TradingView</a></li>
-          <li><a href="https://www.metatrader4.com/" target="_blank">MetaTrader 4</a></li>
-          <li><a href="https://ninjatrader.com/" target="_blank">NinjaTrader - Plataforma Profesional</a></li>
-        </ul>
-      </section>
-
-      <section id="guia">
-        <h2>Guía para Principiantes</h2>
-        <ul>
-          <li>Define un plan de trading y cúmplelo con disciplina.</li>
-          <li>Utiliza siempre gestión de riesgo (Stop Loss).</li>
-          <li>No operes con emociones. Sé paciente.</li>
-          <li>Practica en cuentas demo antes de usar dinero real.</li>
-          <li>Estudia constantemente y mantente actualizado.</li>
-        </ul>
-      </section>
-    </div>
-
-    <!-- Lado derecho -->
-    <div class="sidebar">
-      <img src="https://i.imgur.com/1Xj3g6Q.png" alt="Velas Japonesas">
-      <img src="https://i.imgur.com/WB4HxZJ.png" alt="Gráfico Técnico">
-      <img src="https://i.imgur.com/Nd9QAzN.png" alt="MetaTrader 4">
-    </div>
+  <main>
+    <section id="intro">
+      <h2>Introducción</h2>
+      <p>Bienvenido a tu plataforma para aprender trading. Aquí encontrarás videos, lecturas y recursos seleccionados para ayudarte a dominar los conceptos básicos y avanzar en tu formación.</p>
+    </section>
+    <section id="videos">
+      <h2>Videos Recomendados</h2>
+      <iframe src="https://www.youtube.com/embed/3yNZIFteX2c" title="Introducción al Trading" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/mK4Lw04DXCQ" title="Errores comunes en trading" allowfullscreen style="margin-top:1rem;"></iframe>
+      <iframe src="https://www.youtube.com/embed/Okj_lIkf6KY" title="Análisis técnico básico" allowfullscreen style="margin-top:1rem;"></iframe>
+    </section>
+    <section id="lecturas">
+      <h2>Lecturas y Artículos</h2>
+      <ul>
+        <li><a href="https://www.investopedia.com/articles/trading/06/tradingbasics.asp" target="_blank" rel="noopener noreferrer">Conceptos básicos de trading - Investopedia</a></li>
+        <li><a href="https://www.babypips.com/learn/forex" target="_blank" rel="noopener noreferrer">Guía para principiantes en Forex - BabyPips</a></li>
+        <li><a href="https://www.tradingview.com/ideas/" target="_blank" rel="noopener noreferrer">Ideas de trading y análisis técnico - TradingView</a></li>
+      </ul>
+    </section>
+    <section id="recursos">
+      <h2>Otros Recursos</h2>
+      <ul>
+        <li><a href="https://www.tradingacademy.com/" target="_blank" rel="noopener noreferrer">Online Trading Academy</a></li>
+        <li><a href="https://www.investopedia.com/simulator/" target="_blank" rel="noopener noreferrer">Simulador de trading - Investopedia</a></li>
+        <li><a href="https://www.tradingview.com/chart/" target="_blank" rel="noopener noreferrer">Plataforma de gráficos - TradingView</a></li>
+      </ul>
+    </section>
+    <section id="guia">
+      <h2>Guía rápida para principiantes</h2>
+      <p>Estos son algunos consejos para empezar a operar con éxito:</p>
+      <ul>
+        <li>Define tu plan de trading y síguelo estrictamente.</li>
+        <li>Gestiona tu riesgo usando siempre stop loss.</li>
+        <li>Evita operar con emociones.</li>
+        <li>Empieza con cuentas demo antes de arriesgar dinero real.</li>
+        <li>Estudia constantemente y mantente actualizado.</li>
+      </ul>
+    </section>
   </main>
-
   <footer>
     &copy; 2025 Aprende Trading. Todos los derechos reservados.
   </footer>
 </body>
 </html>
+
+ 
